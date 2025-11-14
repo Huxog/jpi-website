@@ -14,7 +14,7 @@
 
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(30, 58, 138, 0.15);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
         }
 
         .product-image {
@@ -32,7 +32,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            background: #3b82f6;
+            background: var(--color-primary-light);
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
@@ -48,7 +48,7 @@
         }
 
         .product-title {
-            color: #1e3a8a;
+            color: var(--color-primary);
             font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
@@ -76,7 +76,7 @@
         }
 
         .product-price {
-            color: #1e3a8a;
+            color: var(--color-primary);
             font-size: 1.3rem;
             font-weight: 700;
         }
@@ -97,7 +97,7 @@
 
         .add-to-quote {
             width: 100%;
-            background: #3b82f6;
+            background: var(--color-primary-light);
             color: white;
             border: none;
             padding: 0.8rem;
@@ -110,7 +110,7 @@
         }
 
         .add-to-quote:hover {
-            background: #1e40af;
+            background: var(--color-primary);
         }
     </style>
 

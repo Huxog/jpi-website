@@ -9,7 +9,7 @@
 @section('content')
 
     <!-- Hero Section -->
-    <x-hero :title="__('messages.home.hero_title')" :subtitle="__('messages.home.hero_subtitle')" :buttonText="__('messages.home.hero_cta')" buttonUrl="#contact" />
+    <x-hero :title="__('messages.home.hero.title')" :subtitle="__('messages.home.hero.subtitle')" :buttonText="__('messages.home.hero.cta')" buttonUrl="#contact" />
 
     <!-- Services Section -->
     <section class="section section-white" id="services">
@@ -18,6 +18,7 @@
             <div class="services-grid">
                 @foreach (__('messages.home.services.list') as $service)
                     <div class="service-card">
+                        <div class="service-icon">{{ $service['icon'] }}</div>
                         <h3>{{ $service['title'] }}</h3>
                         <p>{{ $service['description'] }}</p>
                     </div>
@@ -80,7 +81,7 @@
     </section>
 
     <!-- Contact Form Section -->
-    <section class="section" id="contact" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
+    <section class="section contact-section" id="contact">
         <div class="form-container">
             <h2>{{__('messages.home.contact.title')}}</h2>
             <form id="contact-form" action="#" method="POST" data-success-message="{{__('messages.home.contact.success_message')}}">

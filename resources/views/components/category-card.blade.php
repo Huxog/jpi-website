@@ -16,13 +16,13 @@
 
         .category-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(30, 58, 138, 0.15);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
         }
 
         .category-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -40,7 +40,7 @@
         }
 
         .category-title {
-            color: #1e3a8a;
+            color: var(--color-primary);
             font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
@@ -62,13 +62,13 @@
         }
 
         .product-count {
-            color: #3b82f6;
+            color: var(--color-primary-light);
             font-weight: 600;
             font-size: 0.9rem;
         }
 
         .view-products {
-            color: #1e40af;
+            color: var(--color-primary);
             font-weight: 600;
             font-size: 0.9rem;
             display: flex;

@@ -22,7 +22,7 @@ return [
 
     'contact' => [
         'phone' => '(656) 580-1974',
-        'email' => 'info@industrialsupply.com',
+        'email' => 'info@jpi-mexico.com',
         'hours' => 'Mon-Fri 7AM-6PM',
         'address' => [
             'street' => '',

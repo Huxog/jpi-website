@@ -22,9 +22,11 @@ return [
 
     // Homepage
     'home' => [
-        'hero_title' => 'Juárez Proveeduría Industrial',
-        'hero_subtitle' => 'Soluciones industriales para sus necesidades',
-        'hero_cta' => 'Cotiza con nosotros hoy',
+        'hero' => [
+            'title' => 'Juárez Proveeduría Industrial',
+            'subtitle' => 'Soluciones industriales para tus necesidades',
+            'cta' => 'Cotiza con nosotros hoy',
+        ],
 
         'services' => [
             'title' => 'Nuestros servicios',
@@ -34,31 +36,37 @@ return [
                     'title' => 'Soluciones de MRO',
                     'description' => 'Productos integrales de mantenimiento, reparación y operaciones para que su negocio funcione sin problemas.',
                     'thumbnail' => 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🔧',
                 ],
                 'safety' => [
                     'title' => 'Equipo de seguridad',
                     'description' => 'Equipos y dispositivos de seguridad de alta calidad diseñados para proteger a su personal.',
                     'thumbnail' => 'https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🦺',
                 ],
                 'hvac' => [
                     'title' => 'Servicios de climatización (HVAC)',
                     'description' => 'Instalación y mantenimiento especializados de sistemas de calefacción, ventilación y aire acondicionado.',
                     'thumbnail' => 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '❄️',
                 ],
                 'consulting' => [
                     'title' => 'Servicios de consultoría',
                     'description' => 'Consultoría profesional para optimizar la eficiencia operativa en sus procesos industriales.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'
+                    'thumbnail' => 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '📊',
                 ],
                 'supplies' => [
                     'title' => 'Suministros industriales',
                     'description' => 'Una amplia gama de productos industriales para respaldar sus operaciones diarias.',
                     'thumbnail' => 'https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '📦',
                 ],
                 'custom' => [
                     'title' => 'Soluciones personalizadas',
                     'description' => 'Soluciones de productos y servicios personalizadas para satisfacer las necesidades específicas de su negocio.',
                     'thumbnail' => 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '⚙️',
                 ],
             ]
         ],

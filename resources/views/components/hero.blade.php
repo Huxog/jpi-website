@@ -1,12 +1,21 @@
-@props(['title', 'subtitle', 'buttonText' => null, 'buttonUrl' => null])
+@props(['title' => null, 'subtitle', 'buttonText' => null, 'buttonUrl' => null, 'showLogo' => true])
 
 <section class="hero">
     <style>
         .hero {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            background: var(--gradient-hero);
             color: white;
             padding: 6rem 2rem;
             text-align: center;
+        }
+
+        .hero-logo {
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 2rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero h1 {
@@ -24,7 +33,7 @@
 
         .hero .cta-button {
             background: white;
-            color: #1e40af;
+            color: var(--color-primary);
             padding: 1rem 2.5rem;
             border: none;
             border-radius: 5px;
@@ -42,18 +51,64 @@
         }
 
         @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero-logo {
+                max-width: 280px;
+                margin-bottom: 1.5rem;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
 
             .hero p {
                 font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero .cta-button {
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero-logo {
+                max-width: 220px;
+                margin-bottom: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero .cta-button {
+                padding: 0.8rem 1.8rem;
+                font-size: 0.95rem;
+                width: 100%;
+                max-width: 280px;
             }
         }
     </style>
 
     <div class="container">
-        <h1>{{ $title }}</h1>
+        @if($showLogo)
+            <img src="{{ asset('images/main-logo.jpg') }}" alt="{{ config('brand.company_name') }}" class="hero-logo">
+        @elseif($title)
+            <h1>{{ $title }}</h1>
+        @endif
         <p>{{ $subtitle }}</p>
         @if($buttonText && $buttonUrl)
             <a href="{{ $buttonUrl }}" class="cta-button">{{ $buttonText }}</a>

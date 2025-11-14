@@ -21,7 +21,7 @@
     }
 
     .breadcrumb a {
-        color: #3b82f6;
+        color: var(--color-primary-light);
         text-decoration: none;
     }
 
@@ -49,7 +49,7 @@
 
     .category-icon-large {
         font-size: 3rem;
-        background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        background: var(--gradient-primary);
         width: 80px;
         height: 80px;
         display: flex;
@@ -59,7 +59,7 @@
     }
 
     .category-details h1 {
-        color: #1e3a8a;
+        color: var(--color-primary);
         font-size: 2rem;
         margin-bottom: 0.5rem;
     }

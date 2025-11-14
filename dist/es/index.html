@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="JNQEDa9czf902wrwFe6gT11yFkeMj1ZpOb27MQuE">
+
+    <title>Juarez Proveeduria industrial - MRO Supplier for Manufacturing - Juarez Proveeduria industrial</title>
+
+    <!-- Brand Styles -->
+    <link rel="stylesheet" href="http://localhost/css/brand.css">
+
+    <!-- Page-specific styles -->
+        <link rel="stylesheet" href="http://localhost/css/pages/home.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+    <nav>
+        <a href="http://localhost/es" class="logo">
+            <img src="http://localhost/images/main-logo.jpg" alt="Juarez Proveeduria industrial" class="logo-img">
+        </a>
+
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="http://localhost/es">Inicio</a></li>
+            <li><a href="http://localhost/es/categories">Categorías</a></li>
+            <li><a href="http://localhost/es#contact">Contacto</a></li>
+
+            
+            <li class="language-switcher">
+                                                            <a href="http://localhost/en" class="lang-link">EN</a>
+                                                                                    </li>
+        </ul>
+    </nav>
+
+    <style>
+        .logo-img {
+            height: 50px;
+            width: auto;
+            display: block;
+            transition: opacity 0.3s;
+        }
+
+        .logo-img:hover {
+            opacity: 0.8;
+        }
+
+        header.scrolled .logo-img {
+            height: 40px;
+        }
+
+        .language-switcher {
+            margin-left: 1rem;
+            padding-left: 1rem;
+            border-left: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .lang-link {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 40px;
+            }
+
+            header.scrolled .logo-img {
+                height: 35px;
+            }
+
+            /* Show hamburger menu */
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            /* Mobile menu styles */
+            .nav-menu {
+                position: fixed;
+                top: 60px;
+                right: -100%;
+                width: 280px;
+                height: calc(100vh - 60px);
+                background: var(--color-primary);
+                flex-direction: column;
+                padding: 2rem 1rem;
+                transition: right 0.3s ease;
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu li {
+                margin-bottom: 1rem;
+            }
+
+            .nav-menu a {
+                display: block;
+                padding: 0.8rem 1rem;
+                font-size: 1.1rem;
+                border-radius: 5px;
+                transition: background 0.3s;
+            }
+
+            .nav-menu a:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            .language-switcher {
+                margin-left: 0;
+                padding-left: 0;
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.3);
+                padding-top: 1rem;
+                margin-top: 1rem;
+            }
+
+            .language-switcher a {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                // Close menu when clicking on a link
+                const navLinks = navMenu.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    const isClickInsideNav = navMenu.contains(event.target);
+                    const isClickOnToggle = mobileMenuToggle.contains(event.target);
+
+                    if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('active')) {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</header>
+
+    <!-- Main Content -->
+    <main>
+        
+    <!-- Hero Section -->
+    <section class="hero">
+    <style>
+        .hero {
+            background: var(--gradient-hero);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-logo {
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 2rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .cta-button {
+            background: white;
+            color: var(--color-primary);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .hero .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero-logo {
+                max-width: 280px;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero .cta-button {
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero-logo {
+                max-width: 220px;
+                margin-bottom: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero .cta-button {
+                padding: 0.8rem 1.8rem;
+                font-size: 0.95rem;
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
+
+    <div class="container">
+                    <img src="http://localhost/images/main-logo.jpg" alt="Juarez Proveeduria industrial" class="hero-logo">
+                <p>Soluciones industriales para tus necesidades</p>
+                    <a href="#contact" class="cta-button">Cotiza con nosotros hoy</a>
+            </div>
+</section>
+
+    <!-- Services Section -->
+    <section class="section section-white" id="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros servicios</h2>
+            <div class="services-grid">
+                                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Soluciones de MRO</h3>
+                        <p>Productos integrales de mantenimiento, reparación y operaciones para que su negocio funcione sin problemas.</p>
+                    </div>
+                                    <div class="service-card">
+                        <div class="service-icon">🦺</div>
+                        <h3>Equipo de seguridad</h3>
+                        <p>Equipos y dispositivos de seguridad de alta calidad diseñados para proteger a su personal.</p>
+                    </div>
+                                    <div class="service-card">
+                        <div class="service-icon">❄️</div>
+                        <h3>Servicios de climatización (HVAC)</h3>
+                        <p>Instalación y mantenimiento especializados de sistemas de calefacción, ventilación y aire acondicionado.</p>
+                    </div>
+                                    <div class="service-card">
+                        <div class="service-icon">📊</div>
+                        <h3>Servicios de consultoría</h3>
+                        <p>Consultoría profesional para optimizar la eficiencia operativa en sus procesos industriales.</p>
+                    </div>
+                                    <div class="service-card">
+                        <div class="service-icon">📦</div>
+                        <h3>Suministros industriales</h3>
+                        <p>Una amplia gama de productos industriales para respaldar sus operaciones diarias.</p>
+                    </div>
+                                    <div class="service-card">
+                        <div class="service-icon">⚙️</div>
+                        <h3>Soluciones personalizadas</h3>
+                        <p>Soluciones de productos y servicios personalizadas para satisfacer las necesidades específicas de su negocio.</p>
+                    </div>
+                            </div>
+        </div>
+    </section>
+
+    <!-- Industry Expertise Carousel Section -->
+    <section class="expertise-section">
+        <div class="expertise-content">
+            <div class="container">
+                <h2 class="section-title">Experiencia en la Industria</h2>
+            </div>
+
+            <div class="carousel-container">
+                <!-- Carousel -->
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                                                    <div class="carousel-slide">
+                                <div class="carousel-slide-inner">
+                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                        alt="Soluciones de MRO">
+                                    <div class="carousel-slide-overlay">
+                                        <h3 class="carousel-slide-title">Soluciones de MRO</h3>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="carousel-slide">
+                                <div class="carousel-slide-inner">
+                                    <img src="https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                        alt="Equipo de seguridad">
+                                    <div class="carousel-slide-overlay">
+                                        <h3 class="carousel-slide-title">Equipo de seguridad</h3>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="carousel-slide">
+                                <div class="carousel-slide-inner">
+                                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                        alt="Servicios de climatización (HVAC)">
+                                    <div class="carousel-slide-overlay">
+                                        <h3 class="carousel-slide-title">Servicios de climatización (HVAC)</h3>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="carousel-slide">
+                                <div class="carousel-slide-inner">
+                                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                        alt="Servicios de consultoría">
+                                    <div class="carousel-slide-overlay">
+                                        <h3 class="carousel-slide-title">Servicios de consultoría</h3>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="carousel-slide">
+                                <div class="carousel-slide-inner">
+                                    <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                        alt="Suministros industriales">
+                                    <div class="carousel-slide-overlay">
+                                        <h3 class="carousel-slide-title">Suministros industriales</h3>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="carousel-slide">
+                                <div class="carousel-slide-inner">
+                                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                        alt="Soluciones personalizadas">
+                                    <div class="carousel-slide-overlay">
+                                        <h3 class="carousel-slide-title">Soluciones personalizadas</h3>
+                                    </div>
+                                </div>
+                            </div>
+                                            </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="carousel-btn carousel-btn-prev" id="prevBtn" aria-label="Previous">‹</button>
+                <button class="carousel-btn carousel-btn-next" id="nextBtn" aria-label="Next">›</button>
+
+                <!-- Indicators -->
+                <div class="carousel-indicators" id="carouselIndicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-white" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Acerca de nosotros</h2>
+                                            <p>Con más de 25 años de experiencia en el sector de suministros industriales, hemos construido nuestra reputación sobre la confiabilidad, la calidad y un servicio al cliente excepcional.</p>
+                                            <p>Entendemos la naturaleza crítica de las operaciones de manufactura y la importancia de contar con los suministros adecuados en el momento adecuado. Nuestro extenso inventario, combinado con nuestra experiencia en la industria, nos convierte en el socio MRO preferido para fabricantes en todo el país.</p>
+                                            <p>Desde pequeños talleres hasta grandes instalaciones de manufactura, ofrecemos los productos y servicios que mantienen sus operaciones funcionando de manera fluida y eficiente.</p>
+                                    </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=800&q=80"
+                        alt="Industrial Supply Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section contact-section" id="contact">
+        <div class="form-container">
+            <h2>Contáctenos</h2>
+            <form id="contact-form" action="#" method="POST" data-success-message="¡Gracias por su interés! Nos pondremos en contacto con usted pronto.">
+                <input type="hidden" name="_token" value="JNQEDa9czf902wrwFe6gT11yFkeMj1ZpOb27MQuE" autocomplete="off">                <div class="form-group">
+                    <label for="firstName">Nombre(s) *</label>
+                    <input type="text" id="firstName" name="firstName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Apellidos *</label>
+                    <input type="text" id="lastName" name="lastName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Nombre de la empresa</label>
+                    <input type="text" id="company" name="company" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Número de teléfono *</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Cuéntenos sobre sus necesidades..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Enviar solicitud</button>
+            </form>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Juarez Proveeduria industrial</h3>
+            <p>Su socio de confianza para suministros MRO y soluciones industriales.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Enlaces Rápidos</h3>
+            <a href="http://localhost/es">Inicio</a>
+            <a href="http://localhost/es/categories">Categorías</a>
+            <a href="http://localhost/es#contact">Contacto</a>
+        </div>
+        <div class="footer-section">
+            <h3>Información de Contacto</h3>
+            <p>Phone: (656) 580-1974</p>
+            <p>Email: info@jpi-mexico.com</p>
+            <p>Horario: Mon-Fri 7AM-6PM</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Juarez Proveeduria industrial. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script>
+        // Sticky navbar with scroll effect
+        const header = document.querySelector('header');
+        let lastScrollTop = 0;
+
+        function handleScroll() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScrollTop = scrollTop;
+        }
+
+        // Throttle scroll events for performance
+        let navbarTicking = false;
+        window.addEventListener('scroll', () => {
+            if (!navbarTicking) {
+                window.requestAnimationFrame(() => {
+                    handleScroll();
+                    navbarTicking = false;
+                });
+                navbarTicking = true;
+            }
+        });
+
+        // Check on page load
+        handleScroll();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        // Account for sticky header height
+                        const headerHeight = header.offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Page-specific scripts -->
+        <script src="http://localhost/js/pages/home.js"></script>
+</body>
+</html>

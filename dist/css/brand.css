@@ -14,7 +14,7 @@
 
     /* Gradient Colors */
     --gradient-primary: linear-gradient(135deg, #001439 0%, #003d82 100%);
-    --gradient-hero: linear-gradient(135deg, #001439 0%, #003d82 100%);
+    --gradient-hero: radial-gradient(circle, #001439 0%, #001439 40%, #003d82 100%);
 
     /* Neutral Colors */
     --color-white: #ffffff;
@@ -515,6 +515,7 @@ footer {
         --font-size-3xl: 2rem;
         --font-size-2xl: 1.5rem;
         --font-size-xl: 1.2rem;
+        --gradient-hero: radial-gradient(circle, #001439 0%, #001439 70%, #003d82 90%);
     }
 
     body {

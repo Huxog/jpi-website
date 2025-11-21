@@ -73,7 +73,7 @@
                     @endforeach
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=800&q=80"
+                    <img src="https://images.unsplash.com/photo-1695783115266-cc092879a11a?auto=format&fit=crop&w=800&q=80"
                         alt="Industrial Supply Team">
                 </div>
             </div>
@@ -84,8 +84,13 @@
     <section class="section contact-section" id="contact">
         <div class="form-container">
             <h2>{{__('messages.home.contact.title')}}</h2>
-            <form id="contact-form" action="#" method="POST" data-success-message="{{__('messages.home.contact.success_message')}}">
-                @csrf
+            <form id="contact-form" action="https://formsubmit.co/muad.hugo@gmail.com" method="POST">
+                <!-- Formsubmit Configuration -->
+                <input type="hidden" name="_subject" value="New Contact Form Submission - JPI">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_next" value="{{ url('/') }}?success=true#contact">
+
                 <div class="form-group">
                     <label for="firstName">{{__('messages.home.contact.first_name')}} *</label>
                     <input type="text" id="firstName" name="firstName" class="form-control" required>

@@ -19,15 +19,35 @@
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(30, 58, 138, 0.15);
+    box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-primary);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
 }
 
 .service-card h3 {
-    color: #1e40af;
+    color: var(--color-primary);
     margin-bottom: 1rem;
     font-size: 1.4rem;
 }
@@ -43,11 +63,11 @@
     position: relative;
     padding: 5rem 0;
     overflow: hidden;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e40af 100%);
+    background: var(--gradient-primary);
     --parallax-offset: 0px;
 }
 
-/* Parallax Background Pattern */
+/* Modern Gradient Overlay */
 .expertise-section::before {
     content: '';
     position: absolute;
@@ -55,17 +75,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image:
-        repeating-linear-gradient(45deg,
-            transparent,
-            transparent 35px,
-            rgba(255, 255, 255, 0.03) 35px,
-            rgba(255, 255, 255, 0.03) 70px),
-        repeating-linear-gradient(-45deg,
-            transparent,
-            transparent 35px,
-            rgba(255, 255, 255, 0.03) 35px,
-            rgba(255, 255, 255, 0.03) 70px);
+    background:
+        radial-gradient(circle at 20% 50%, rgba(0, 61, 130, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 20, 57, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(0, 61, 130, 0.3) 0%, transparent 40%),
+        linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.05) 100%);
     transform: translateY(var(--parallax-offset));
     will-change: transform;
     z-index: 1;
@@ -131,7 +145,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(30, 58, 138, 0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 20, 57, 0.9), transparent);
     padding: 1.5rem;
     color: white;
 }
@@ -149,7 +163,7 @@
     top: 50%;
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.9);
-    color: #1e3a8a;
+    color: var(--color-primary);
     border: none;
     width: 50px;
     height: 50px;
@@ -231,6 +245,10 @@
 /* ========================================
    CONTACT FORM SECTION
    ======================================== */
+.contact-section {
+    background: var(--gradient-primary);
+}
+
 .form-container {
     max-width: 600px;
     margin: 0 auto;
@@ -241,7 +259,7 @@
 }
 
 .form-container h2 {
-    color: #1e3a8a;
+    color: var(--color-primary);
     margin-bottom: 2rem;
     text-align: center;
     font-size: 2rem;
@@ -250,13 +268,37 @@
 /* ========================================
    RESPONSIVE
    ======================================== */
+
+/* Tablets and smaller laptops */
 @media (max-width: 992px) {
     .carousel-slide {
         min-width: 33.333%;
     }
+
+    .expertise-section {
+        padding: 4rem 0;
+    }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+    }
+
+    /* Carousel */
     .carousel-slide {
         min-width: 50%;
     }
@@ -269,17 +311,101 @@
         height: 250px;
     }
 
-    .about-content {
-        grid-template-columns: 1fr;
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
 
+    .expertise-section {
+        padding: 3rem 0;
+    }
+
+    /* About Section */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    /* Contact Form */
     .form-container {
         padding: 2rem;
     }
 }
 
+/* Mobile devices */
 @media (max-width: 480px) {
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    /* Carousel */
     .carousel-slide {
         min-width: 100%;
+    }
+
+    .carousel-container {
+        padding: 0 1rem;
+    }
+
+    .carousel-slide-inner {
+        height: 200px;
+    }
+
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .carousel-btn-prev {
+        left: 0.25rem;
+    }
+
+    .carousel-btn-next {
+        right: 0.25rem;
+    }
+
+    .carousel-indicators {
+        margin-top: 1rem;
+    }
+
+    .expertise-section {
+        padding: 2rem 0;
+    }
+
+    .expertise-section .section-title {
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+
+    /* About Section */
+    .about-image img {
+        height: 250px;
+    }
+
+    /* Contact Form */
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem;
     }
 }

@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="Vr5Wi4TLUM39Ql9hrbIHTzeyqoPsEHYZ58vKac7O">
+
+    <title>Hand &amp; Power Tools - Juarez Proveeduria industrial</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="https://huxog.github.io/jpi-website/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://huxog.github.io/jpi-website/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://huxog.github.io/jpi-website/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://huxog.github.io/jpi-website/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://huxog.github.io/jpi-website/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://huxog.github.io/jpi-website/images/android-chrome-512x512.png">
+
+    <!-- Brand Styles -->
+    <link rel="stylesheet" href="https://huxog.github.io/jpi-website/css/brand.css">
+
+    <!-- Page-specific styles -->
+    </head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+    <nav>
+        <a href="https://huxog.github.io/jpi-website/en" class="logo">
+            <img src="https://huxog.github.io/jpi-website/images/main-logo.jpg" alt="Juarez Proveeduria industrial" class="logo-img">
+        </a>
+
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="https://huxog.github.io/jpi-website/en">Home</a></li>
+            <li><a href="https://huxog.github.io/jpi-website/en/categories">Categories</a></li>
+            <li><a href="https://huxog.github.io/jpi-website/en#contact">Contact</a></li>
+
+            
+            <li class="language-switcher">
+                                                                                                <a href="https://huxog.github.io/jpi-website/es/products?category=bearings" class="lang-link">ES</a>
+                                                </li>
+        </ul>
+    </nav>
+
+    <style>
+        .logo-img {
+            height: 50px;
+            width: auto;
+            display: block;
+            transition: opacity 0.3s;
+        }
+
+        .logo-img:hover {
+            opacity: 0.8;
+        }
+
+        header.scrolled .logo-img {
+            height: 40px;
+        }
+
+        .language-switcher {
+            margin-left: 1rem;
+            padding-left: 1rem;
+            border-left: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .lang-link {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 40px;
+            }
+
+            header.scrolled .logo-img {
+                height: 35px;
+            }
+
+            /* Show hamburger menu */
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            /* Mobile menu styles */
+            .nav-menu {
+                position: fixed;
+                top: 60px;
+                right: -100%;
+                width: 280px;
+                height: calc(100vh - 60px);
+                background: var(--color-primary);
+                flex-direction: column;
+                padding: 2rem 1rem;
+                transition: right 0.3s ease;
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu li {
+                margin-bottom: 1rem;
+            }
+
+            .nav-menu a {
+                display: block;
+                padding: 0.8rem 1rem;
+                font-size: 1.1rem;
+                border-radius: 5px;
+                transition: background 0.3s;
+            }
+
+            .nav-menu a:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            .language-switcher {
+                margin-left: 0;
+                padding-left: 0;
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.3);
+                padding-top: 1rem;
+                margin-top: 1rem;
+            }
+
+            .language-switcher a {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                // Close menu when clicking on a link
+                const navLinks = navMenu.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    const isClickInsideNav = navMenu.contains(event.target);
+                    const isClickOnToggle = mobileMenuToggle.contains(event.target);
+
+                    if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('active')) {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</header>
+
+    <!-- Main Content -->
+    <main>
+        
+<style>
+    .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        color: #64748b;
+        font-size: 0.9rem;
+        padding: 0 2rem;
+        margin-top: 2rem;
+    }
+
+    .breadcrumb a {
+        color: var(--color-primary-light);
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    .breadcrumb-separator {
+        color: #cbd5e1;
+    }
+
+    .page-header {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+
+    .category-info {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .category-icon-large {
+        font-size: 3rem;
+        background: var(--gradient-primary);
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    .category-details h1 {
+        color: var(--color-primary);
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .category-details p {
+        color: #64748b;
+        font-size: 1.1rem;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .search-box {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 2px solid #e2e8f0;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    @media (max-width: 768px) {
+        .category-info {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .controls {
+            flex-direction: column;
+        }
+
+        .search-box {
+            width: 100%;
+        }
+    }
+</style>
+
+<div class="container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="https://huxog.github.io/jpi-website/en">Home</a>
+        <span class="breadcrumb-separator">›</span>
+        <a href="https://huxog.github.io/jpi-website/en/categories">Categories</a>
+        <span class="breadcrumb-separator">›</span>
+        <span>Hand &amp; Power Tools</span>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="category-info">
+            <div class="category-icon-large">🔧</div>
+            <div class="category-details">
+                <h1>Hand &amp; Power Tools</h1>
+                <p>Quality hand tools, pneumatic tools, and electric power tools</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search products..." class="form-control">
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+                    <div class="product-card">
+    <style>
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--color-primary-light);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-sku {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-price {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .product-stock {
+            color: #10b981;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .product-stock.low-stock {
+            color: #f59e0b;
+        }
+
+        .product-stock.out-of-stock {
+            color: #ef4444;
+        }
+
+        .add-to-quote {
+            width: 100%;
+            background: var(--color-primary-light);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 0.8rem;
+        }
+
+        .add-to-quote:hover {
+            background: var(--color-primary);
+        }
+    </style>
+
+    <div class="product-image">
+                    <span class="product-badge">Popular</span>
+                📦
+    </div>
+    <div class="product-content">
+        <h3 class="product-title">Cordless Drill 20V</h3>
+        <div class="product-sku">SKU: CD-2001</div>
+        <p class="product-description">20V lithium-ion cordless drill with 2 batteries and charger</p>
+        <div class="product-meta">
+            <span class="product-price">$149.99</span>
+            <span class="product-stock ">
+                                    In Stock
+                            </span>
+        </div>
+        <button class="add-to-quote" onclick="alert('Product added to quote request! Contact us to complete your order.')">
+            Add to Quote
+        </button>
+    </div>
+</div>
+                    <div class="product-card">
+    <style>
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--color-primary-light);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-sku {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-price {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .product-stock {
+            color: #10b981;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .product-stock.low-stock {
+            color: #f59e0b;
+        }
+
+        .product-stock.out-of-stock {
+            color: #ef4444;
+        }
+
+        .add-to-quote {
+            width: 100%;
+            background: var(--color-primary-light);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 0.8rem;
+        }
+
+        .add-to-quote:hover {
+            background: var(--color-primary);
+        }
+    </style>
+
+    <div class="product-image">
+                📦
+    </div>
+    <div class="product-content">
+        <h3 class="product-title">Impact Wrench 1/2&quot;</h3>
+        <div class="product-sku">SKU: IW-3050</div>
+        <p class="product-description">1/2&quot; drive pneumatic impact wrench, 900 ft-lbs torque</p>
+        <div class="product-meta">
+            <span class="product-price">$189.99</span>
+            <span class="product-stock ">
+                                    In Stock
+                            </span>
+        </div>
+        <button class="add-to-quote" onclick="alert('Product added to quote request! Contact us to complete your order.')">
+            Add to Quote
+        </button>
+    </div>
+</div>
+                    <div class="product-card">
+    <style>
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--color-primary-light);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-sku {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-price {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .product-stock {
+            color: #10b981;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .product-stock.low-stock {
+            color: #f59e0b;
+        }
+
+        .product-stock.out-of-stock {
+            color: #ef4444;
+        }
+
+        .add-to-quote {
+            width: 100%;
+            background: var(--color-primary-light);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 0.8rem;
+        }
+
+        .add-to-quote:hover {
+            background: var(--color-primary);
+        }
+    </style>
+
+    <div class="product-image">
+                    <span class="product-badge">New</span>
+                📦
+    </div>
+    <div class="product-content">
+        <h3 class="product-title">Socket Set 84-Piece</h3>
+        <div class="product-sku">SKU: SS-4100</div>
+        <p class="product-description">Professional 84-piece socket set with carrying case</p>
+        <div class="product-meta">
+            <span class="product-price">$129.99</span>
+            <span class="product-stock ">
+                                    In Stock
+                            </span>
+        </div>
+        <button class="add-to-quote" onclick="alert('Product added to quote request! Contact us to complete your order.')">
+            Add to Quote
+        </button>
+    </div>
+</div>
+                    <div class="product-card">
+    <style>
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--color-primary-light);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-sku {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-price {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .product-stock {
+            color: #10b981;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .product-stock.low-stock {
+            color: #f59e0b;
+        }
+
+        .product-stock.out-of-stock {
+            color: #ef4444;
+        }
+
+        .add-to-quote {
+            width: 100%;
+            background: var(--color-primary-light);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 0.8rem;
+        }
+
+        .add-to-quote:hover {
+            background: var(--color-primary);
+        }
+    </style>
+
+    <div class="product-image">
+                📦
+    </div>
+    <div class="product-content">
+        <h3 class="product-title">Angle Grinder 4.5&quot;</h3>
+        <div class="product-sku">SKU: AG-5200</div>
+        <p class="product-description">4.5&quot; angle grinder, 11 amp motor with safety guard</p>
+        <div class="product-meta">
+            <span class="product-price">$79.99</span>
+            <span class="product-stock low-stock">
+                                    Low Stock
+                            </span>
+        </div>
+        <button class="add-to-quote" onclick="alert('Product added to quote request! Contact us to complete your order.')">
+            Add to Quote
+        </button>
+    </div>
+</div>
+                    <div class="product-card">
+    <style>
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--color-primary-light);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-sku {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-price {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .product-stock {
+            color: #10b981;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .product-stock.low-stock {
+            color: #f59e0b;
+        }
+
+        .product-stock.out-of-stock {
+            color: #ef4444;
+        }
+
+        .add-to-quote {
+            width: 100%;
+            background: var(--color-primary-light);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 0.8rem;
+        }
+
+        .add-to-quote:hover {
+            background: var(--color-primary);
+        }
+    </style>
+
+    <div class="product-image">
+                📦
+    </div>
+    <div class="product-content">
+        <h3 class="product-title">Torque Wrench Digital</h3>
+        <div class="product-sku">SKU: TW-6300</div>
+        <p class="product-description">Digital torque wrench with LCD display, 10-150 ft-lbs</p>
+        <div class="product-meta">
+            <span class="product-price">$199.99</span>
+            <span class="product-stock ">
+                                    In Stock
+                            </span>
+        </div>
+        <button class="add-to-quote" onclick="alert('Product added to quote request! Contact us to complete your order.')">
+            Add to Quote
+        </button>
+    </div>
+</div>
+                    <div class="product-card">
+    <style>
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--color-primary-light);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-sku {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-price {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .product-stock {
+            color: #10b981;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .product-stock.low-stock {
+            color: #f59e0b;
+        }
+
+        .product-stock.out-of-stock {
+            color: #ef4444;
+        }
+
+        .add-to-quote {
+            width: 100%;
+            background: var(--color-primary-light);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 0.8rem;
+        }
+
+        .add-to-quote:hover {
+            background: var(--color-primary);
+        }
+    </style>
+
+    <div class="product-image">
+                📦
+    </div>
+    <div class="product-content">
+        <h3 class="product-title">Tool Cart 5-Drawer</h3>
+        <div class="product-sku">SKU: TC-7400</div>
+        <p class="product-description">Heavy-duty 5-drawer rolling tool cart with locking mechanism</p>
+        <div class="product-meta">
+            <span class="product-price">$299.99</span>
+            <span class="product-stock ">
+                                    In Stock
+                            </span>
+        </div>
+        <button class="add-to-quote" onclick="alert('Product added to quote request! Contact us to complete your order.')">
+            Add to Quote
+        </button>
+    </div>
+</div>
+            </div>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Juarez Proveeduria industrial</h3>
+            <p>Your trusted partner for MRO supplies and industrial solutions.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="https://huxog.github.io/jpi-website/en">Home</a>
+            <a href="https://huxog.github.io/jpi-website/en/categories">Categories</a>
+            <a href="https://huxog.github.io/jpi-website/en#contact">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>Phone: (656) 580-1974</p>
+            <p>Email: info@jpi-mexico.com</p>
+            <p>Hours: Mon-Fri 7AM-6PM</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Juarez Proveeduria industrial. All rights reserved.</p>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script>
+        // Sticky navbar with scroll effect
+        const header = document.querySelector('header');
+        let lastScrollTop = 0;
+
+        function handleScroll() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScrollTop = scrollTop;
+        }
+
+        // Throttle scroll events for performance
+        let navbarTicking = false;
+        window.addEventListener('scroll', () => {
+            if (!navbarTicking) {
+                window.requestAnimationFrame(() => {
+                    handleScroll();
+                    navbarTicking = false;
+                });
+                navbarTicking = true;
+            }
+        });
+
+        // Check on page load
+        handleScroll();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        // Account for sticky header height
+                        const headerHeight = header.offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Page-specific scripts -->
+    <script>
+    // Search functionality
+    document.getElementById('search-input').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach(card => {
+            const title = card.querySelector('.product-title').textContent.toLowerCase();
+            const sku = card.querySelector('.product-sku').textContent.toLowerCase();
+            const description = card.querySelector('.product-description').textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || sku.includes(searchTerm) || description.includes(searchTerm)) {
+                card.parentElement.style.display = 'block';
+            } else {
+                card.parentElement.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>

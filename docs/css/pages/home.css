@@ -67,21 +67,32 @@
     --parallax-offset: 0px;
 }
 
-/* Modern Gradient Overlay */
+/* Parallax Background Image */
 .expertise-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    background-image: url('https://images.unsplash.com/photo-1752904646691-7dd9675a6b32?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(var(--parallax-offset));
+    will-change: transform;
+    z-index: 1;
+}
+
+/* Dark Overlay for Text Readability */
+.expertise-section::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background:
-        radial-gradient(circle at 20% 50%, rgba(0, 61, 130, 0.4) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(0, 20, 57, 0.4) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(0, 61, 130, 0.3) 0%, transparent 40%),
-        linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.05) 100%);
-    transform: translateY(var(--parallax-offset));
-    will-change: transform;
+    background: rgba(0, 20, 57, 0.7);
     z-index: 1;
 }
 

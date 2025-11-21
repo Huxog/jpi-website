@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="Vr5Wi4TLUM39Ql9hrbIHTzeyqoPsEHYZ58vKac7O">
+
+    <title>Product Categories - Juarez Proveeduria industrial</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="https://huxog.github.io/jpi-website/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://huxog.github.io/jpi-website/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://huxog.github.io/jpi-website/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://huxog.github.io/jpi-website/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://huxog.github.io/jpi-website/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://huxog.github.io/jpi-website/images/android-chrome-512x512.png">
+
+    <!-- Brand Styles -->
+    <link rel="stylesheet" href="https://huxog.github.io/jpi-website/css/brand.css">
+
+    <!-- Page-specific styles -->
+    </head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+    <nav>
+        <a href="https://huxog.github.io/jpi-website/en" class="logo">
+            <img src="https://huxog.github.io/jpi-website/images/main-logo.jpg" alt="Juarez Proveeduria industrial" class="logo-img">
+        </a>
+
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="https://huxog.github.io/jpi-website/en">Home</a></li>
+            <li><a href="https://huxog.github.io/jpi-website/en/categories">Categories</a></li>
+            <li><a href="https://huxog.github.io/jpi-website/en#contact">Contact</a></li>
+
+            
+            <li class="language-switcher">
+                                                                                                <a href="https://huxog.github.io/jpi-website/es/categories" class="lang-link">ES</a>
+                                                </li>
+        </ul>
+    </nav>
+
+    <style>
+        .logo-img {
+            height: 50px;
+            width: auto;
+            display: block;
+            transition: opacity 0.3s;
+        }
+
+        .logo-img:hover {
+            opacity: 0.8;
+        }
+
+        header.scrolled .logo-img {
+            height: 40px;
+        }
+
+        .language-switcher {
+            margin-left: 1rem;
+            padding-left: 1rem;
+            border-left: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .lang-link {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 40px;
+            }
+
+            header.scrolled .logo-img {
+                height: 35px;
+            }
+
+            /* Show hamburger menu */
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            /* Mobile menu styles */
+            .nav-menu {
+                position: fixed;
+                top: 60px;
+                right: -100%;
+                width: 280px;
+                height: calc(100vh - 60px);
+                background: var(--color-primary);
+                flex-direction: column;
+                padding: 2rem 1rem;
+                transition: right 0.3s ease;
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu li {
+                margin-bottom: 1rem;
+            }
+
+            .nav-menu a {
+                display: block;
+                padding: 0.8rem 1rem;
+                font-size: 1.1rem;
+                border-radius: 5px;
+                transition: background 0.3s;
+            }
+
+            .nav-menu a:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            .language-switcher {
+                margin-left: 0;
+                padding-left: 0;
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.3);
+                padding-top: 1rem;
+                margin-top: 1rem;
+            }
+
+            .language-switcher a {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                // Close menu when clicking on a link
+                const navLinks = navMenu.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    const isClickInsideNav = navMenu.contains(event.target);
+                    const isClickOnToggle = mobileMenuToggle.contains(event.target);
+
+                    if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('active')) {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</header>
+
+    <!-- Main Content -->
+    <main>
+        
+<div class="container" style="margin-top: 2rem; margin-bottom: 3rem;">
+    <div class="page-header text-center" style="margin-bottom: 3rem;">
+        <h1 class="page-title">Product Categories</h1>
+        <p class="page-subtitle">Browse our comprehensive range of MRO supplies and industrial products</p>
+    </div>
+
+    <style>
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+    </style>
+
+    <div class="categories-grid">
+        <a href="https://huxog.github.io/jpi-website/en/products?category=safety-equipment" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">🦺</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Safety Equipment</h3>
+        <p class="category-description">PPE, fall protection, respiratory systems, safety barriers, and emergency equipment to keep your workforce safe.</p>
+        <div class="category-meta">
+            <span class="product-count">180+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+
+        <a href="https://huxog.github.io/jpi-website/en/products?category=tools" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">🔧</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Hand &amp; Power Tools</h3>
+        <p class="category-description">Quality hand tools, pneumatic tools, electric power tools, and tool storage solutions for every application.</p>
+        <div class="category-meta">
+            <span class="product-count">250+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+
+        <a href="https://huxog.github.io/jpi-website/en/products?category=fasteners" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">🔩</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Fasteners &amp; Hardware</h3>
+        <p class="category-description">Bolts, nuts, screws, washers, anchors, and specialty fasteners in various materials and grades.</p>
+        <div class="category-meta">
+            <span class="product-count">320+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+
+        <a href="https://huxog.github.io/jpi-website/en/products?category=electrical" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">⚡</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Electrical Supplies</h3>
+        <p class="category-description">Wiring, conduit, breakers, switches, connectors, and electrical testing equipment for industrial applications.</p>
+        <div class="category-meta">
+            <span class="product-count">195+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+
+        <a href="https://huxog.github.io/jpi-website/en/products?category=plumbing-hvac" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">🔧</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Plumbing &amp; HVAC</h3>
+        <p class="category-description">Pipes, fittings, valves, pumps, HVAC filters, and climate control components for facility maintenance.</p>
+        <div class="category-meta">
+            <span class="product-count">165+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+
+        <a href="https://huxog.github.io/jpi-website/en/products?category=welding" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">🔥</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Welding &amp; Metal Working</h3>
+        <p class="category-description">Welding equipment, cutting tools, grinding supplies, and metal fabrication accessories.</p>
+        <div class="category-meta">
+            <span class="product-count">140+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+
+        <a href="https://huxog.github.io/jpi-website/en/products?category=material-handling" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">📦</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Material Handling</h3>
+        <p class="category-description">Conveyors, pallet jacks, carts, hoists, rigging equipment, and warehouse organization systems.</p>
+        <div class="category-meta">
+            <span class="product-count">125+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+
+        <a href="https://huxog.github.io/jpi-website/en/products?category=lubricants" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">🛢️</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Lubricants &amp; Fluids</h3>
+        <p class="category-description">Industrial lubricants, hydraulic fluids, cutting oils, greases, and fluid handling equipment.</p>
+        <div class="category-meta">
+            <span class="product-count">90+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+
+        <a href="https://huxog.github.io/jpi-website/en/products?category=abrasives" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">⚙️</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Abrasives &amp; Cutting Tools</h3>
+        <p class="category-description">Grinding wheels, sanding discs, drill bits, saw blades, and precision cutting tools.</p>
+        <div class="category-meta">
+            <span class="product-count">210+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+
+        <a href="https://huxog.github.io/jpi-website/en/products?category=cleaning" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">🧹</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Cleaning &amp; Janitorial</h3>
+        <p class="category-description">Industrial cleaners, floor care equipment, waste receptacles, and facility maintenance supplies.</p>
+        <div class="category-meta">
+            <span class="product-count">110+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+
+        <a href="https://huxog.github.io/jpi-website/en/products?category=adhesives" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">🧪</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Adhesives &amp; Sealants</h3>
+        <p class="category-description">Industrial adhesives, epoxies, sealants, tapes, and surface preparation products.</p>
+        <div class="category-meta">
+            <span class="product-count">85+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+
+        <a href="https://huxog.github.io/jpi-website/en/products?category=bearings" class="category-card">
+    <style>
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 20, 57, 0.15);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .product-count {
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .view-products {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .view-products::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .view-products::after {
+            transform: translateX(5px);
+        }
+    </style>
+
+    <div class="category-image">
+        <div class="category-icon">⚙️</div>
+    </div>
+    <div class="category-content">
+        <h3 class="category-title">Bearings &amp; Power Transmission</h3>
+        <p class="category-description">Ball bearings, roller bearings, belts, chains, sprockets, and drive components.</p>
+        <div class="category-meta">
+            <span class="product-count">175+ Products</span>
+            <span class="view-products">View Products</span>
+        </div>
+    </div>
+</a>
+    </div>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Juarez Proveeduria industrial</h3>
+            <p>Your trusted partner for MRO supplies and industrial solutions.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="https://huxog.github.io/jpi-website/en">Home</a>
+            <a href="https://huxog.github.io/jpi-website/en/categories">Categories</a>
+            <a href="https://huxog.github.io/jpi-website/en#contact">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>Phone: (656) 580-1974</p>
+            <p>Email: info@jpi-mexico.com</p>
+            <p>Hours: Mon-Fri 7AM-6PM</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Juarez Proveeduria industrial. All rights reserved.</p>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script>
+        // Sticky navbar with scroll effect
+        const header = document.querySelector('header');
+        let lastScrollTop = 0;
+
+        function handleScroll() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScrollTop = scrollTop;
+        }
+
+        // Throttle scroll events for performance
+        let navbarTicking = false;
+        window.addEventListener('scroll', () => {
+            if (!navbarTicking) {
+                window.requestAnimationFrame(() => {
+                    handleScroll();
+                    navbarTicking = false;
+                });
+                navbarTicking = true;
+            }
+        });
+
+        // Check on page load
+        handleScroll();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        // Account for sticky header height
+                        const headerHeight = header.offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Page-specific scripts -->
+    </body>
+</html>

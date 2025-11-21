@@ -194,35 +194,20 @@
 })();
 
 // ========================================
-// CONTACT FORM HANDLER
+// CONTACT FORM SUCCESS MESSAGE
 // ========================================
 (function() {
-    const contactForm = document.getElementById('contact-form');
+    // Check if redirected back with success parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+        // Show success message
+        const message = document.querySelector('[data-lang="en"]')
+            ? 'Thank you for your interest! We will contact you shortly.'
+            : '¡Gracias por su interés! Nos pondremos en contacto con usted en breve.';
 
-    if (!contactForm) return;
+        alert(message);
 
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Collect form data
-        const formData = {
-            firstName: document.getElementById('firstName').value,
-            lastName: document.getElementById('lastName').value,
-            company: document.getElementById('company').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            message: document.getElementById('message').value,
-            timestamp: new Date().toISOString()
-        };
-
-        // TODO: Replace with your CRM API endpoint
-        console.log('Form data ready for CRM:', formData);
-
-        // Get success message from data attribute
-        const successMessage = contactForm.dataset.successMessage || 'Thank you for your interest! We will contact you shortly.';
-
-        // Temporary success message
-        alert(successMessage);
-        this.reset();
-    });
+        // Clean up URL
+        window.history.replaceState({}, document.title, window.location.pathname + '#contact');
+    }
 })();

@@ -8,6 +8,7 @@
             <h3>{{ __('messages.footer.quick_links') }}</h3>
             <a href="{{ localized_route('home') }}">{{ __('messages.nav.home') }}</a>
             <a href="{{ localized_route('categories') }}">{{ __('messages.nav.categories') }}</a>
+            <a href="{{ asset('Catalogo_Automatizaciones_2025.pdf') }}" target="_blank">{{ __('messages.footer.automation_catalog') }}</a>
             <a href="{{ localized_route('home') }}#contact">{{ __('messages.nav.contact') }}</a>
         </div>
         <div class="footer-section">

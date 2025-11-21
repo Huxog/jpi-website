@@ -35,20 +35,26 @@ return [
                 'mro' => [
                     'title' => 'MRO Solutions',
                     'description' => 'Comprehensive maintenance, repair, and operations products to keep your business running smoothly.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1737703121444-c568a9d3bc0e?auto=format&fit=crop&w=800&q=80',
                     'icon' => '🔧',
                 ],
                 'safety' => [
                     'title' => 'Safety equipment',
                     'description' => 'High-quality safety equipment and devices designed to protect your personnel.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?auto=format&fit=crop&w=800&q=80',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1662309376159-b95fb193d96b?auto=format&fit=crop&w=800&q=80',
                     'icon' => '🦺',
                 ],
                 'hvac' => [
                     'title' => 'HVAC Services',
                     'description' => 'Expert installation and maintenance of heating, ventilation, and air conditioning systems.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1666439831693-27a2c3920f83?auto=format&fit=crop&w=800&q=80',
                     'icon' => '❄️',
+                ],
+                'machining' => [
+                    'title' => 'Machining Services',
+                    'description' => 'Precision machining and fabrication services to meet your custom industrial needs.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1666634157070-6fd830fb5672?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🪛',
                 ],
                 'consulting' => [
                     'title' => 'Consulting Services',
@@ -59,13 +65,19 @@ return [
                 'supplies' => [
                     'title' => 'Industrial Supplies',
                     'description' => 'A wide range of industrial products to support your daily operations.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=800&q=80',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1741655262435-4890ab9918fa?auto=format&fit=crop&w=800&q=80',
                     'icon' => '📦',
+                ],
+                'automation' => [
+                    'title' => 'Automation Solutions',
+                    'description' => 'Sensors and utilities to enhance the efficiency and productivity of your industrial processes.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🚨',
                 ],
                 'custom' => [
                     'title' => 'Custom Solutions',
                     'description' => 'Tailored product and service solutions to meet the unique demands of your business.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&q=80',
                     'icon' => '⚙️',
                 ],
             ]
@@ -169,6 +181,7 @@ return [
         'quick_links' => 'Quick Links',
         'contact_info' => 'Contact Info',
         'hours' => 'Hours',
+        'automation_catalog' => 'Automation Catalog',
     ],
 
 ];

@@ -50,6 +50,12 @@ return [
                     'thumbnail' => 'https://images.unsplash.com/photo-1666439831693-27a2c3920f83?auto=format&fit=crop&w=800&q=80',
                     'icon' => '❄️',
                 ],
+                'machining' => [
+                    'title' => 'Maquinados',
+                    'description' => 'Servicios de maquinado y fabricación de precisión para satisfacer sus necesidades industriales personalizadas.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1666634157070-6fd830fb5672?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🪛',
+                ],
                 'consulting' => [
                     'title' => 'Servicios de consultoría',
                     'description' => 'Consultoría profesional para optimizar la eficiencia operativa en sus procesos industriales.',
@@ -59,8 +65,14 @@ return [
                 'supplies' => [
                     'title' => 'Suministros industriales',
                     'description' => 'Una amplia gama de productos industriales para respaldar sus operaciones diarias.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1741655262435-4890ab9918fa?auto=format&fit=crop&w=800&q=80',
                     'icon' => '📦',
+                ],
+                'automation' => [
+                    'title' => 'Soluciones de automatización',
+                    'description' => 'Sensores y utilidades para mejorar la eficiencia y productividad de sus procesos industriales.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🚨',
                 ],
                 'custom' => [
                     'title' => 'Soluciones personalizadas',
@@ -169,6 +181,7 @@ return [
         'quick_links' => 'Enlaces Rápidos',
         'contact_info' => 'Información de Contacto',
         'hours' => 'Horario',
+        'automation_catalog' => 'Catálogo de Automatizaciones',
     ],
 
 ];

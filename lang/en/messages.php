@@ -38,6 +38,30 @@ return [
                     'thumbnail' => 'https://images.unsplash.com/photo-1737703121444-c568a9d3bc0e?auto=format&fit=crop&w=800&q=80',
                     'icon' => '🔧',
                 ],
+                'electric' => [
+                    'title' => 'Electrical Supplies',
+                    'description' => 'Wide range of electrical components and tools for industrial applications.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '⚡',
+                ],
+                'fire_safety' => [
+                    'title' => 'Fire Safety Equipment',
+                    'description' => 'Top-quality fire safety products to protect your facility and personnel.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🧯',
+                ],
+                'machining' => [
+                    'title' => 'Machining Services',
+                    'description' => 'Precision machining and fabrication services to meet your custom industrial needs.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1666634157070-6fd830fb5672?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🪛',
+                ],
+                'automation' => [
+                    'title' => 'Automation Solutions',
+                    'description' => 'Sensors and utilities to enhance the efficiency and productivity of your industrial processes.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🚨',
+                ],
                 'safety' => [
                     'title' => 'Safety equipment',
                     'description' => 'High-quality safety equipment and devices designed to protect your personnel.',
@@ -50,12 +74,6 @@ return [
                     'thumbnail' => 'https://images.unsplash.com/photo-1666439831693-27a2c3920f83?auto=format&fit=crop&w=800&q=80',
                     'icon' => '❄️',
                 ],
-                'machining' => [
-                    'title' => 'Machining Services',
-                    'description' => 'Precision machining and fabrication services to meet your custom industrial needs.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1666634157070-6fd830fb5672?auto=format&fit=crop&w=800&q=80',
-                    'icon' => '🪛',
-                ],
                 'consulting' => [
                     'title' => 'Consulting Services',
                     'description' => 'Professional consulting to optimize operational efficiency in your industrial processes.',
@@ -67,12 +85,6 @@ return [
                     'description' => 'A wide range of industrial products to support your daily operations.',
                     'thumbnail' => 'https://images.unsplash.com/photo-1741655262435-4890ab9918fa?auto=format&fit=crop&w=800&q=80',
                     'icon' => '📦',
-                ],
-                'automation' => [
-                    'title' => 'Automation Solutions',
-                    'description' => 'Sensors and utilities to enhance the efficiency and productivity of your industrial processes.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80',
-                    'icon' => '🚨',
                 ],
                 'custom' => [
                     'title' => 'Custom Solutions',
@@ -182,6 +194,7 @@ return [
         'contact_info' => 'Contact Info',
         'hours' => 'Hours',
         'automation_catalog' => 'Automation Catalog',
+        'line_card' => 'About us',
     ],
 
 ];

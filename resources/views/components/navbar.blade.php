@@ -13,7 +13,7 @@
 
         <ul class="nav-menu" id="navMenu">
             <li><a href="{{ localized_route('home') }}">{{ __('messages.nav.home') }}</a></li>
-            <li><a href="{{ localized_route('categories') }}">{{ __('messages.nav.categories') }}</a></li>
+            {{-- <li><a href="{{ localized_route('categories') }}">{{ __('messages.nav.categories') }}</a></li> --}}
             <li><a href="{{ localized_route('home') }}#contact">{{ __('messages.nav.contact') }}</a></li>
 
             {{-- Language Switcher --}}

@@ -38,6 +38,30 @@ return [
                     'thumbnail' => 'https://images.unsplash.com/photo-1737703121444-c568a9d3bc0e?auto=format&fit=crop&w=800&q=80',
                     'icon' => '🔧',
                 ],
+                'electric' => [
+                    'title' => 'Suministros eléctricos',
+                    'description' => 'Amplia gama de componentes eléctricos y herramientas para aplicaciones industriales.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '⚡',
+                ],
+                'fire_safety' => [
+                    'title' => 'Seguridad contra incendios',
+                    'description' => 'Productos de seguridad contra incendios de la más alta calidad para proteger sus instalaciones y su personal.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🧯',
+                ],
+                'machining' => [
+                    'title' => 'Maquinados',
+                    'description' => 'Servicios de maquinado y fabricación de precisión para satisfacer sus necesidades industriales personalizadas.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1666634157070-6fd830fb5672?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🪛',
+                ],
+                'automation' => [
+                    'title' => 'Soluciones de automatización',
+                    'description' => 'Sensores y utilidades para mejorar la eficiencia y productividad de sus procesos industriales.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80',
+                    'icon' => '🚨',
+                ],
                 'safety' => [
                     'title' => 'Equipo de seguridad',
                     'description' => 'Equipos y dispositivos de seguridad de alta calidad diseñados para proteger a su personal.',
@@ -50,12 +74,6 @@ return [
                     'thumbnail' => 'https://images.unsplash.com/photo-1666439831693-27a2c3920f83?auto=format&fit=crop&w=800&q=80',
                     'icon' => '❄️',
                 ],
-                'machining' => [
-                    'title' => 'Maquinados',
-                    'description' => 'Servicios de maquinado y fabricación de precisión para satisfacer sus necesidades industriales personalizadas.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1666634157070-6fd830fb5672?auto=format&fit=crop&w=800&q=80',
-                    'icon' => '🪛',
-                ],
                 'consulting' => [
                     'title' => 'Servicios de consultoría',
                     'description' => 'Consultoría profesional para optimizar la eficiencia operativa en sus procesos industriales.',
@@ -67,12 +85,6 @@ return [
                     'description' => 'Una amplia gama de productos industriales para respaldar sus operaciones diarias.',
                     'thumbnail' => 'https://images.unsplash.com/photo-1741655262435-4890ab9918fa?auto=format&fit=crop&w=800&q=80',
                     'icon' => '📦',
-                ],
-                'automation' => [
-                    'title' => 'Soluciones de automatización',
-                    'description' => 'Sensores y utilidades para mejorar la eficiencia y productividad de sus procesos industriales.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80',
-                    'icon' => '🚨',
                 ],
                 'custom' => [
                     'title' => 'Soluciones personalizadas',
@@ -182,6 +194,7 @@ return [
         'contact_info' => 'Información de Contacto',
         'hours' => 'Horario',
         'automation_catalog' => 'Catálogo de Automatizaciones',
+        'line_card' => 'Acerca de nosotros',
     ],
 
 ];

@@ -39,15 +39,15 @@ return [
                     'icon' => '🔧',
                 ],
                 'electric' => [
-                    'title' => 'Electrical Supplies',
-                    'description' => 'Wide range of electrical components and tools for industrial applications.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
+                    'title' => 'Electrical Services and Supplies',
+                    'description' => 'Electrical installation and maintenance services to ensure safe and efficient industrial operations.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?auto=format&fit=crop&w=800&q=80',
                     'icon' => '⚡',
                 ],
                 'fire_safety' => [
-                    'title' => 'Fire Safety Equipment',
-                    'description' => 'Top-quality fire safety products to protect your facility and personnel.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80',
+                    'title' => 'Fire protection systems',
+                    'description' => 'Installation and maintenance of fire protection systems to safeguard your facility.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1577678923709-758495cb4497?auto=format&fit=crop&w=800&q=80',
                     'icon' => '🧯',
                 ],
                 'machining' => [

@@ -39,15 +39,15 @@ return [
                     'icon' => '🔧',
                 ],
                 'electric' => [
-                    'title' => 'Suministros eléctricos',
-                    'description' => 'Amplia gama de componentes eléctricos y herramientas para aplicaciones industriales.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
+                    'title' => 'Servicios y Suministros eléctricos',
+                    'description' => 'Servicios de instalación y mantenimiento eléctrico para garantizar operaciones industriales seguras y eficientes.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?auto=format&fit=crop&w=800&q=80',
                     'icon' => '⚡',
                 ],
                 'fire_safety' => [
-                    'title' => 'Seguridad contra incendios',
-                    'description' => 'Productos de seguridad contra incendios de la más alta calidad para proteger sus instalaciones y su personal.',
-                    'thumbnail' => 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80',
+                    'title' => 'Sistema contra incendios',
+                    'description' => 'Instalación y mantenimiento de sistemas de protección contra incendios para salvaguardar su instalación.',
+                    'thumbnail' => 'https://images.unsplash.com/photo-1577678923709-758495cb4497?auto=format&fit=crop&w=800&q=80',
                     'icon' => '🧯',
                 ],
                 'machining' => [

@@ -72,6 +72,6 @@ return [
         'es' => 'Español',
     ],
 
-    'default_language' => 'en',
+    'default_language' => 'es',
 
 ];

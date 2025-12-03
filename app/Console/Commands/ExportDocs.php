@@ -46,6 +46,9 @@ class ExportDocs extends Command
         $this->info('Replacing URLs in HTML files...');
         $this->replaceUrls($docsPath, $baseUrl);
 
+        $this->info('Copying Spanish content to root...');
+        $this->copySpanishToRoot($docsPath);
+
         $this->info('Export to docs completed successfully!');
         return 0;
     }
@@ -77,6 +80,36 @@ class ExportDocs extends Command
             ], $content);
 
             File::put($file->getPathname(), $content);
+        }
+    }
+
+    /**
+     * Copy Spanish content to root directory.
+     */
+    protected function copySpanishToRoot(string $path): void
+    {
+        $esPath = $path . '/es';
+
+        if (!File::isDirectory($esPath)) {
+            $this->warn('Spanish directory does not exist. Skipping root copy.');
+            return;
+        }
+
+        // Get all files from the /es directory
+        $files = File::allFiles($esPath);
+
+        foreach ($files as $file) {
+            $relativePath = str_replace($esPath . '/', '', $file->getPathname());
+            $destinationPath = $path . '/' . $relativePath;
+
+            // Create directory if it doesn't exist
+            $destinationDir = dirname($destinationPath);
+            if (!File::isDirectory($destinationDir)) {
+                File::makeDirectory($destinationDir, 0755, true);
+            }
+
+            // Copy the file
+            File::copy($file->getPathname(), $destinationPath);
         }
     }
 }

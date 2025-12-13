@@ -52,7 +52,7 @@ return [
                 ],
                 'machining' => [
                     'title' => 'Machining Services',
-                    'description' => 'Precision machining and fabrication services to meet your custom industrial needs.',
+                    'description' => 'High-precision machining and parts manufacturing services to meet your customized industrial needs.',
                     'thumbnail' => 'https://images.unsplash.com/photo-1666634157070-6fd830fb5672?auto=format&fit=crop&w=800&q=80',
                     'icon' => '🪛',
                 ],

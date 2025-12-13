@@ -84,7 +84,7 @@
     <section class="section contact-section" id="contact">
         <div class="form-container">
             <h2>{{__('messages.home.contact.title')}}</h2>
-            <form id="contact-form" action="https://formsubmit.co/info@jpi-mexico.com" method="POST">
+            <form id="contact-form" action="https://formsubmit.co/e91f736ebf73edd83959476cb71cbc7f" method="POST">
                 <!-- Formsubmit Configuration -->
                 <input type="hidden" name="_subject" value="New Contact Form Submission - JPI">
                 <input type="hidden" name="_captcha" value="false">

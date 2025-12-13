@@ -52,7 +52,7 @@ return [
                 ],
                 'machining' => [
                     'title' => 'Maquinados',
-                    'description' => 'Servicios de maquinado y fabricación de precisión para satisfacer sus necesidades industriales personalizadas.',
+                    'description' => 'Servicios de maquinado y fabricación de piezas con alta precisión para satisfacer sus necesidades industriales personalizadas.',
                     'thumbnail' => 'https://images.unsplash.com/photo-1666634157070-6fd830fb5672?auto=format&fit=crop&w=800&q=80',
                     'icon' => '🪛',
                 ],
